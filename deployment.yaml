@@ -17,7 +17,7 @@ spec:
       - image: bharathshetty4/supermario:latest
         name: supermario-container
         ports:
-        - containerPort: 80
+        - containerPort: 8080
 
 ---
 apiVersion: v1
@@ -29,6 +29,6 @@ spec:
     app: supermario
   ports:
   - protocol: TCP
-    port: 80  # <-- Change this line to your desired port
-    targetPort: 80
+    port: 8600  # <-- Change this line to your desired port
+    targetPort: 8080
   type: LoadBalancer
