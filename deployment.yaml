@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: supermario-deployment
+  name: mariodemo-deployment
 spec:
   replicas: 1
   revisionHistoryLimit: 3
   selector:
     matchLabels:
-      app: supermario
+      app: mariodemo
   template:
     metadata:
       labels:
-        app: supermario
+        app: mariodemo
     spec:
       containers:
-      - image: bharathshetty4/supermario:latest
+      - image: asecurityguru/mariodemo:v1.0
         name: supermario-container
         ports:
         - containerPort: 8080
@@ -26,7 +26,7 @@ metadata:
   name: supermario-service
 spec:
   selector:
-    app: supermario
+    app: mariodemo
   ports:
   - protocol: TCP
     port: 8600  # <-- Change this line to your desired port
