@@ -14,7 +14,7 @@ spec:
         app: mariodemo
     spec:
       containers:
-      - image: asecurityguru/mariodemo:v1.0
+      - image: asecurityguru/mariodemo:v2.0
         name: supermario-container
         ports:
         - containerPort: 8080
